@@ -2,7 +2,7 @@
 
 Empathy Ally is a chat application that helps people have more meaningful and empathetic conversations with each other. It uses OpenAI's natural language processing API to provide personalized prompts and suggestions during chats, making it easier for users to express themselves and connect with others. The app is built using React and Vite.js, with the chat engine provided by ChatEngine.
 
-https://youtu.be/HblJhiQFsGM
+https://youtu.be/e97bUtYJ-jg
 
 
 ## Features
