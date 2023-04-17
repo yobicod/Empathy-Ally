@@ -11,7 +11,7 @@ router.post("/text", async (req, res) => {
     const { text, activeChatId } = req.body;
 
     const response = await openai.createCompletion({
-      model: "text-davinci-003",
+      model: "text-davinci-002",
       prompt: text,
       temperature: 0.5,
       max_tokens: 2048,
@@ -77,7 +77,7 @@ router.post("/assist", async (req, res) => {
     const { text } = req.body;
 
     const response = await openai.createCompletion({
-      model: "text-davinci-003",
+      model: "text-davinci-002",
       prompt: `Finish my thought: ${text}`,
       temperature: 0.5,
       max_tokens: 1024,
