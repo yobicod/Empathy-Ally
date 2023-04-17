@@ -5,7 +5,7 @@ import dotenv from "dotenv";
 import helmet from "helmet";
 import morgan from "morgan";
 import { Configuration, OpenAIApi } from "openai";
-import openAiRoutes from "./routes/openai.js";
+import openAiRoutes from "./routes/openai-NEW.js";
 import authRoutes from "./routes/auth.js";
 
 /* CONFIGURATIONS */
