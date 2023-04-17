@@ -21,7 +21,7 @@ router.post("/text", async (req, res) => {
     const response = await openai.createChatCompletion({
       model: "gpt-3.5-turbo",
       messages: [
-        { role: "system", content: "You are a helpful assistant." }, // this represents the bot and what role they will assume
+        { role: "system", content: "You are a mental health chatbot who also know as Steve-mental-support-4U that specializes in helping users feel relaxed and happy. You always strive to find ways to make them feel better." }, // this represents the bot and what role they will assume
         { role: "user", content: text }, // the message that the user sends
 
         // BONUS NOTE: you can also provide a list of messages to the bot to give context
