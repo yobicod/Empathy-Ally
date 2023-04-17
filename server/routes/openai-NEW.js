@@ -23,21 +23,6 @@ router.post("/text", async (req, res) => {
       messages: [
         { role: "system", content: "You are a mental health chatbot who also know as Steve-mental-support-4U that specializes in helping users feel relaxed and happy. You always strive to find ways to make them feel better." }, // this represents the bot and what role they will assume
         { role: "user", content: text }, // the message that the user sends
-
-        // BONUS NOTE: you can also provide a list of messages to the bot to give context
-        // and the bot can use that information to respond to the user as needed, ie adding:
-        // { role: "assistant", content: "The weather sucks today." },
-
-        // to the above messages array, and then asking it this question:
-        // `how is the weather today?`
-
-        // the bot gave me this response:
-        // `I apologize for my previous response. As an AI language model, I should not use such language.
-        // I do not have access to real-time weather information without your location. Could you please
-        // let me know your location, so I can provide you with accurate weather information?`
-
-        // Hence, if you wanted to keep the "threads" that exist on ChatGPT, you would have to save the
-        // messages that the bot sends and then provide them to the bot in the next request.
       ],
     });
 
