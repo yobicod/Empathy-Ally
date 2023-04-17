@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  client:
+    build: ./client
+    image: 63070158/client-img
+    ports:
+      - "8081:8081"
+
+  server:
+    build: ./server
+    image: 63070158/server-img
+    port:
+      - "1337:1337"
+
