@@ -9,7 +9,7 @@ pipeline {
             steps {
             
                 echo 'Initial : Delete  containers and images'
-                 dir('Empathy_Ally-OPEN-AI-') { // change directory to Lab_docker_Jenkins
+                 dir('Dog') { // change directory to Lab_docker_Jenkins
                     echo "Current path is ${pwd()}"
                     sh "docker-compose down --rmi all --volumes || true"
                 }
@@ -19,7 +19,7 @@ pipeline {
 
         stage('Build Stage') {
             steps {
-                dir('Empathy_Ally-OPEN-AI-') { // change directory to Lab_docker_Jenkins
+                dir('Dog') { // change directory to Lab_docker_Jenkins
                     echo "Current path is ${pwd()}"
                     sh "docker-compose build"
                 }
@@ -35,7 +35,7 @@ pipeline {
 
         stage('Push Stage') {
             steps {
-                dir('Empathy_Ally-OPEN-AI-') { // change directory to Lab_docker_Jenkins
+                dir('Dog') { // change directory to Lab_docker_Jenkins
                     echo "Push : Current path is ${pwd()}"
                     sh "docker-compose push"
                 }
@@ -43,7 +43,7 @@ pipeline {
         }
         stage('Trigger Slave Dockerhub last update') {
             steps {
-                dir('Empathy_Ally-OPEN-AI-') { // change directory to Lab_docker_Jenkins
+                dir('Dog') { // change directory to Lab_docker_Jenkins
                     echo "Trigger : calling Slave job . . ."
                     sh 'echo "HELLO ${DOCKERHUB_CREDENTIALS_USR}"'
                     build job: 'Slave', parameters: [string(name: 'DOCKERHUB_CREDENTIALS_USR', value: env.DOCKERHUB_CREDENTIALS_USR), string(name: 'DOCKERHUB_CREDENTIALS_PSW', value: env.DOCKERHUB_CREDENTIALS_PSW)]
